@@ -5,8 +5,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-
-	_ "github.com/go-sql-driver/mysql"
+	_"github.com/go-sql-driver/mysql"
 )
 
 var plantillas = template.Must(template.ParseGlob("Plantillas/*"))
@@ -26,7 +25,7 @@ func conexionBD() (conexion *sql.DB) {
 
 func main() {
 	http.HandleFunc("/", Inicio)
-	log.Println("Servidor encendido")
+	log.Println("Servidor Encendido...")
 	http.ListenAndServe(":8080", nil)
 }
 func Inicio(w http.ResponseWriter, r *http.Request) {
