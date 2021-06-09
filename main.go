@@ -28,6 +28,8 @@ func main() {
 	http.HandleFunc("/", Inicio)
 	http.HandleFunc("/empresa", Empresa)
 	http.HandleFunc("/galeria", Galeria)
+	http.HandleFunc("/carrito", Carrito)
+	http.HandleFunc("/contacto", Contacto)
 	log.Println("Servidor Encendido...")
 	http.ListenAndServe(":8080", nil)
 }
@@ -41,4 +43,11 @@ func Empresa(w http.ResponseWriter, r *http.Request) {
 
 func Galeria(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "galeria", nil)
+}
+func Carrito(w http.ResponseWriter, r *http.Request) {
+	plantillas.ExecuteTemplate(w, "carrito", nil)
+}
+
+func Contacto(w http.ResponseWriter, r *http.Request) {
+	plantillas.ExecuteTemplate(w, "contacto", nil)
 }
