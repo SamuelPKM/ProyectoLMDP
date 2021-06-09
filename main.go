@@ -5,7 +5,8 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	_"github.com/go-sql-driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var plantillas = template.Must(template.ParseGlob("Plantillas/*"))
@@ -34,10 +35,10 @@ func Inicio(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "inicio", nil)
 }
 
-func Empresa(w http.ResponseWriter, r *http.Request){
+func Empresa(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "empresa", nil)
 }
 
-func Galeria(w http.ResponseWriter, r *http.Request){
+func Galeria(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "galeria", nil)
 }
