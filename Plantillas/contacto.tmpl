@@ -1,0 +1,60 @@
+{{define "contacto"}}
+{{template "cabecera"}}
+
+<style>
+    label{
+        text-decoration: dashed;
+        font-size: x-large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    legend{
+        background-color: darkseagreen;
+        border-radius: 80%;
+      
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="well well-sm">
+         <form  class="form-horizontal" method="post">
+             <fieldset>
+                 <legend class="text-center header">Contactanos</legend>
+                 <div class="form-group">
+                   <label for="Nombre">Nombre:</label>
+                   <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Nombre" aria-describedby="helpId">
+                   <small id="helpId" class="text-muted">Escribe tu nombre arriba chulo</small>
+                </div>
+                <div class="form-group">
+                  <label for="Lastname">Apellido</label>
+                  <input type="text" class="form-control" name="Lastname" id="Lastname" aria-describedby="lname" placeholder="Dame tu apellido">
+                  <small id="lname" class="form-text text-muted">Dame tu apellido chulo</small>
+                </div>
+                <div class="form-group">
+                  <label for="correo">Correo-E</label>
+                  <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="Aqui pon tu correo electronico">
+                  <small id="emailHelpId" class="form-text text-muted">Escribe tu correo Electronico chulo</small>
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Telefono</label>
+                  <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Telefono" aria-describedby="phone">
+                  <small id="phone" class="text-muted">Danos tu telefono chulo</small>
+                </div>
+                <div class="form-group">
+                  <label for="description">Cuentanos por que nos contactas</label>
+                  <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>  
+                    </div>
+                </div>
+             </fieldset>
+         </form>
+        </div>
+    </div>
+</div>
+
+{{template "pie"}}
+{{end}}
