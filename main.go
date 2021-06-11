@@ -30,6 +30,7 @@ func main() {
 	http.HandleFunc("/galeria", Galeria)
 	http.HandleFunc("/carrito", Carrito)
 	http.HandleFunc("/contacto", Contacto)
+	http.Handle("/Imagenes/", http.StripPrefix("/Imagenes/", http.FileServer(http.Dir("Imagenes/"))))
 	log.Println("Servidor Encendido...")
 	http.ListenAndServe(":8080", nil)
 }
