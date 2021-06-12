@@ -30,6 +30,7 @@ func main() {
 	http.HandleFunc("/galeria", Galeria)
 	http.HandleFunc("/carrito", Carrito)
 	http.HandleFunc("/contacto", Contacto)
+	http.HandleFunc("/pagar", Pagar)
 	http.Handle("/Imagenes/", http.StripPrefix("/Imagenes/", http.FileServer(http.Dir("Imagenes/"))))
 	log.Println("Servidor Encendido...")
 	http.ListenAndServe(":8080", nil)
@@ -51,4 +52,8 @@ func Carrito(w http.ResponseWriter, r *http.Request) {
 
 func Contacto(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "contacto", nil)
+}
+
+func Pagar(w http.ResponseWriter, r *http.Request) {
+	plantillas.ExecuteTemplate(w, "pagar", nil)
 }

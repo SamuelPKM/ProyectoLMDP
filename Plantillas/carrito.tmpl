@@ -1,7 +1,161 @@
 {{define "carrito"}}
 {{template "cabecera"}}
 
+<style>
+  .description{
+  height: 25px;
+  overflow: hidden;
+  transition: height .3s ease-in .3s;
+}
+.description:hover{
+  height: 120px;
+}
+</style>
 
+<div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Auriculares Gamer</h5>
+        <img src="/Imagenes/auriculares.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+              Estos auriculares ademas de contar con cancelacion total de ruido
+              tambien cuentan con todos los modos de conectividad actuales, para no tener problemas de compatibilidad
+              Comprelos y notara la diferencia en comparacion con los de la competencia.  
+            </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 3200</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Videojuego Gears 5</h5>
+        <img src="/Imagenes/gears5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+              Videojuego Gears 5, puede pasar buenas horas de diversion ademas de tener una muy buena campana 
+              ademas de un multijugador muy activo
+            </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 1200</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Kit de Carga</h5>
+        <img src="/Imagenes/kitscarga.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            Kit de carga para xbox, pues no hay mucho que decir, es un kit de carga ^_^
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 700</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Mando Xbox</h5>
+        <img src="/Imagenes/mandoxbox.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">Un mando de Xbox, lleve al siguiente nivel sus partidas </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary"> Videojuego Mario Kart 8</h5>
+        <img src="/Imagenes/mariokart8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            ¡Calienta motores en la versión definitiva de Mario Kart™ 8 y juega donde y cuando quieras! Compite con tus amigos en carreras o en el modo batalla
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Tarjeta de regalo Xbox</h5>
+        <img src="/Imagenes/tarjetaregalo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            Adquiere una tarjeta de regalo de Xbox y úsala para juegos y entretenimientos en Xbox. Compra los últimos juegos, paquetes de mapas, películas, programas
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 500</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">The last of Us</h5>
+        <img src="/Imagenes/thelastofus.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            The Last of Us es un videojuego de acción-aventura y horror de supervivencia desarrollado por la compañía estadounidense 
+            Naughty Dog y distribuido por Sony Computer Entertainment para la consola PlayStation
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 1200</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Visores VR</h5>
+        <img src="/Imagenes/visoresVR.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            Conecta tu PlayStation®VR a la consola PS5 para disfrutar de los juegos compatibles con PS VR. 
+            Retrocompatibilidad Disfruta de un catálogo de juegos de PS
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Xbox One</h5>
+        <img src="/Imagenes/xboxone.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-white-50 description">
+            Juega la mejor selección de juegos, incluidos clásicos de Xbox 360, en una consola más pequeña. 
+            No permitas que su tamaño te engañe, con la fuente de alimentación dentro de la propia consola 
+            y gran almacenamiento interno, la Xbox One S es la Xbox muy avanzada.
+          </p>
+          <h5 class="text-primary">Precio: <span class="precio">$ 5000</span></h5>
+          <div class="d-grid gap-2">
+          <button  class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {{template "pie"}}
 {{end}}
