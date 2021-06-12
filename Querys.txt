@@ -1,0 +1,15 @@
+CREATE TABLE `tienda`.`productos` ( `ID_Producto` INT NOT NULL , `Nombre` VARCHAR(30) NOT NULL , `Marca` VARCHAR(30) NOT NULL , `Precio` INT NOT NULL , PRIMARY KEY (`ID_Producto`)) ENGINE = InnoDB;
+
+
+///
+
+
+CREATE TABLE `tienda`.`contactos` ( `ID_Contacto` INT UNSIGNED NOT NULL , `Nombre` VARCHAR(30) NOT NULL , `Apellidos` VARCHAR(30) NOT NULL , `Correo` VARCHAR(30) NOT NULL , `Telefono` INT NOT NULL , `Descripcion` VARCHAR(30) NOT NULL , PRIMARY KEY (`ID_Contacto`)) ENGINE = InnoDB;
+
+///
+
+CREATE TABLE `tienda`.`clientes` ( `ID_Cliente` INT NOT NULL , `Nombre` VARCHAR(30) NOT NULL , `Apellido` VARCHAR(30) NOT NULL , `Corrreo` VARCHAR(30) NOT NULL , `Password` VARCHAR(30) NOT NULL , `Telefono` INT NOT NULL , PRIMARY KEY (`ID_Cliente`)) ENGINE = InnoDB;
+
+///
+
+CREATE TABLE `tienda`.`carrito` ( `ID_Carrito` INT NOT NULL , `ID_Producto` INT NOT NULL , `ID_Cliente` INT NOT NULL , PRIMARY KEY (`ID_Carrito`)) ENGINE = InnoDB;

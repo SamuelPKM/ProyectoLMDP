@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"html/template"
 	"log"
+	"math/rand"
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -47,13 +48,34 @@ func Galeria(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "galeria", nil)
 }
 func Carrito(w http.ResponseWriter, r *http.Request) {
+	conexionBD()
 	plantillas.ExecuteTemplate(w, "carrito", nil)
+}
+
+func Pagar(w http.ResponseWriter, r *http.Request) {
+	plantillas.ExecuteTemplate(w, "pagar", nil)
 }
 
 func Contacto(w http.ResponseWriter, r *http.Request) {
 	plantillas.ExecuteTemplate(w, "contacto", nil)
 }
 
-func Pagar(w http.ResponseWriter, r *http.Request) {
-	plantillas.ExecuteTemplate(w, "pagar", nil)
+func InsertarContacto(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "post" {
+		ID := rand.Int()
+		Nombre := r.FormValue("Nombre")
+		Apellido := r.FormValue("Lastname")
+		Correo := r.FormValue("correo")
+		Telefono := r.FormValue("telefono")
+		Descripcion := r.FormValue("description")
+
+		conexionEstablecida := conexionBD()
+
+		InsertarRegistro, err := conexionEstablecida.Prepare("insert into contactos (ID_Contacto,Nombre,Apellidos,Correo,Telefono,Descripcion) VALUES(?,?,?,?,?,?)")
+		if err != nil {
+			panic(err.Error())
+		}
+		InsertarRegistro.Exec(ID, Nombre, Correo, Apellido, Telefono, Descripcion)
+		http.Redirect(w, r, "/", 301)
+	}
 }
