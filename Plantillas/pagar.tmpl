@@ -1,6 +1,34 @@
 {{define "pagar"}}
 {{template "cabecera"}}
 
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th class="mob-hide">Precio</th>
+                <th></th>
+              </tr>
+            </thead>
+            
+            <tr>
+              <td>
+                <h3>Wacom Bamboo Tablet</h3>
+                
+                <small>color: Grey</small><br>
+                
+              </td>
+              <td class="mob-hide">
+                
+                <span class="order-product-price">$100.000</span>
+                
+              </td>
+              
+              <td clas="text-right"><a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Eliminar</a></td>
+            </tr>
+            
+          </table>
+        </div>
 
 {{template "pie"}}
 {{end}}

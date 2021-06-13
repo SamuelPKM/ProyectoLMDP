@@ -10,44 +10,43 @@
     legend{
         background-color: #e0e0e0;
         border-radius: 80%;
-      
     }
 </style>
 
 <div class="row">
     <div class="col-md-12">
         <div class="well well-sm">
-         <form  class="form-horizontal" method="post">
+         <form  class="form-horizontal" method="post" action="/insertarContacto">
              <fieldset>
                  <legend class="text-center header">Contactanos</legend>
                  <div class="form-group">
                    <label for="Nombre">Nombre:</label>
-                   <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Nombre" aria-describedby="helpId">
-                   <small id="helpId" class="text-muted">Escribe tu nombre arriba chulo</small>
+                   <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Escribe tu nombre aquí..." aria-describedby="helpId" required>
+                   <!--<small id="helpId" class="text-muted">Escribe tu nombre arriba chulo</small>-->
                 </div>
                 <div class="form-group">
-                  <label for="Lastname">Apellido</label>
-                  <input type="text" class="form-control" name="Lastname" id="Lastname" aria-describedby="lname" placeholder="Dame tu apellido">
-                  <small id="lname" class="form-text text-muted">Dame tu apellido chulo</small>
+                  <label for="Apellido">Apellido:</label>
+                  <input type="text" name="Apellido" id="Apellido" class="form-control" placeholder="Escribe tu apellido aquí..." aria-describedby="helpId" required>
+                  <!--<small id="lname" class="form-text text-muted">Dame tu apellido chulo</small>-->
                 </div>
                 <div class="form-group">
-                  <label for="correo">Correo-E</label>
-                  <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="Aqui pon tu correo electronico">
-                  <small id="emailHelpId" class="form-text text-muted">Escribe tu correo Electronico chulo</small>
+                  <label for="Correo">Correo Electrónico:</label>
+                  <input type="texto" name="Correo" id="Correo" class="form-control" placeholder="Escribe tu correo electrónico aquí..." aria-describedby="helpId" required>
+                  <!--<small id="emailHelpId" class="form-text text-muted">Escribe tu correo Electronico chulo</small>-->
                 </div>
                 <div class="form-group">
-                  <label for="telefono">Telefono</label>
-                  <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Telefono" aria-describedby="phone">
-                  <small id="phone" class="text-muted">Danos tu telefono chulo</small>
+                  <label for="Telefono">Teléfono:</label>
+                  <input type="text" name="Telefono" id="Telefono" class="form-control" placeholder="Escribe tu teléfono aquí..." aria-describedby="helpId" required>
+                  <!--<small id="phone" class="text-muted">Danos tu telefono chulo</small>-->
                 </div>
                 <div class="form-group">
-                  <label for="description">Cuentanos por que nos contactas</label>
-                  <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                  <label for="Descripcion">Cuentanos para que nos contactas:</label>
+                  <textarea name="Descripcion" id="Descripcion" rows="3" class="form-control" placeholder="Escribe aquí..." required></textarea>
                 </div>
-
+                <br/>
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>  
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>  
                     </div>
                 </div>
              </fieldset>
