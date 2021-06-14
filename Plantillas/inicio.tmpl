@@ -1,6 +1,104 @@
 {{define "inicio"}}
 {{template "cabecera"}}
+        <p>
+       <i><b> ¡Buscas videojuegos, accesorios a un buen precio y excelente calidad has encontrado el lugar correcto!.
+     </i></b> 
+      <br/>
+      <br/>
+        La mejor tienda de videojuegos en México para comprar online juegos digitales de consola o PC es Gamer Center.
+        Aqui vas a poder adquirir juegos para tu computadora, Xbox, PlayStation o Nintendo a los mejores precios.
+        Miles de juegos a la venta te esperan.
+        <br/>
+         <div class="contenedor">
+        <a class="nav-link" href="/empresa"> <div class="texto-encima"><div class="centrado"><font color="black">
+       <b> ¡Sobre Nosotros!</div></div></b>
+        <img border="0" style="float:left" src="/Imagenes/Nosotros.jpg" width="500" height="300"></a>
+        <span class="sr-only">(current)</span></a></font>
+        </div>
+         <div class="contenedor2">
+        <a class="nav-link" href="/carrito"> <div class="texto-encima2"><div class="centrado2"> <font color="black">
+       <b> <br/>¡Compra YA!</div></div></b>
+        <img border="0" style="float:right"  src="/Imagenes/carrito.jpg" width="500" height="300"></a>
+       <span class="sr-only">(current)</span></a></font>
+       </div>
+        <br/>
+        Aquí podras comprar de manera rápida y segura a tan solo unos clicks de distancia, y todo desde la comodidad de tu
+        hogar a cualquier hora del día o de la noche.
+        <br/>
+        <B> Miles de clientes que han adquirido en nuestra tienda online nos avalan. </B>
+        <br/>
+<br/>
+<br/>
+<br/>    
+        _______________________________________________________________________________________________________________
+       <br/> Este proyecto está enfocado en realizar una tienda online de videojuegos, donde se puedan comprar tanto juegos como
+        accesorios para que el cliente encuentre todo lo que necesita a la mano sin necesidad de visitar otra página online.
+        Todo el proyecto está desarrollado bajo el lenguaje Go, junto con CSS y Bootstrap, ya que han ayudado a que la realización
+        de este proyecto fluyera de manera simple. 
+<br/><br/>
+        El objetico principal del desarrollo de este proyecto es la demostración de los conocimientos que hemos
+        adquirido al cursar la materia de Lenguajes Modernos basándonos en uno de los lenguajes que se utilizaron en 
+        lo largo del curso, además la realización de este proyecto nos ayuda como alumnos a investigar e indagar más 
+        sobre los temas vistos.
+        ________________________________________________________________________________________________________________
+<br/>
+        
+        </p>
+    <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+    background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      font-size:21px;
+    }
     
+    .jumbotron {
+    background: none
+}
+
+   
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size:45px;
+    font-color: black;
+}
+.texto-encima{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contenedor2{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size:45px;
+}
+.texto-encima2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centrado2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>          
 
 {{template "pie"}}
 {{end}}
