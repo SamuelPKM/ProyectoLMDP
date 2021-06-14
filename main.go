@@ -5,7 +5,8 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	_"github.com/go-sql-driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var plantillas = template.Must(template.ParseGlob("Plantillas/*"))
@@ -66,21 +67,21 @@ func Registrar(w http.ResponseWriter, r *http.Request) {
 }
 
 func InsertarUsuario(w http.ResponseWriter, r *http.Request) {
-	if r.Method=="POST"{
-		nombre:= r.FormValue("Nombre")
-		apellido:= r.FormValue("Apellido")
-		correo:= r.FormValue("Correo")
-		telefono:= r.FormValue("Telefono")
+	if r.Method == "POST" {
+		nombre := r.FormValue("Nombre")
+		apellido := r.FormValue("Apellido")
+		correo := r.FormValue("Correo")
+		telefono := r.FormValue("Telefono")
 
-		conexionEst:=conexionBD()
-		insertarRegistro, err:=conexionEst.Prepare("INSERT INTO contactos(Nombre, Apellido, Correo, Telefono) VALUES(?,?,?,?)")
-		
-		if err!=nil{
+		conexionEst := conexionBD()
+		insertarRegistro, err := conexionEst.Prepare("INSERT INTO contactos(Nombre, Apellido, Correo, Telefono) VALUES(?,?,?,?)")
+
+		if err != nil {
 			panic(err.Error())
 		}
 		insertarRegistro.Exec(nombre, apellido, correo, telefono)
-		
-		http.Redirect(w,r,"/carrito", 301)
+
+		http.Redirect(w, r, "/carrito", 301)
 	}
 }
 

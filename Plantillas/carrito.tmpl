@@ -2,6 +2,9 @@
 {{template "cabecera"}}
 
 <style>
+  header, .alert{
+  z-index: 100;
+}
   .description{
   height: 25px;
   overflow: hidden;
@@ -10,7 +13,94 @@
 .description:hover{
   height: 120px;
 }
+.carrito{
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+.table__productos{
+  display: flex;
+}
+.table__productos > img{
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.table__cantidad > input{
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.hide, .remove{
+  display: none;
+}
 </style>
+
+<div class="container-fluid bg-dark position-sticky top-0">
+  <ul
+    class="nav nav-pills mb-3 py-3 container"
+    id="pills-tab"
+    role="tablist"
+  >
+
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link active"
+      id="pills-profile-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-profile"
+      type="button"
+      role="tab"
+      aria-controls="pills-profile"
+      aria-selected="false"
+      >Productos</a
+    >
+  </li>
+
+  <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="pills-contact-tab"
+        data-bs-toggle="pill"
+        data-bs-target="#pills-contact"
+        type="button"
+        role="tab"
+        aria-controls="pills-contact"
+        aria-selected="false"
+        >Carrito</a
+      >
+    </li>
+  </ul>
+</div>
+
+<div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        Producto Añadido al carrito!
+</div>
+<div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+          Producto removido!
+</div>
+
+<div class="tab-content" id="pills-tabContent">
+  <div
+    class="tab-pane fade "
+    id="pills-home"
+    role="tabpanel"
+    aria-labelledby="pills-home-tab"
+  >
+    1
+  </div>
+  <div
+    class="tab-pane fade show active container"
+    id="pills-profile"
+    role="tabpanel"
+    aria-labelledby="pills-profile-tab"
+  >
 
 <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 
@@ -42,7 +132,7 @@
             </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 1200</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="11" name="11" class="btn btn-primary button" >Añadir a Carrito</button>
         </div>
         </div>
       </div>
@@ -70,14 +160,14 @@
           <p class="card-text text-white-50 description">Un mando de Xbox, lleve al siguiente nivel sus partidas. </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="13" name="13" class="btn btn-primary button" >Añadir a Carrito</button>
         </div>
         </div>
       </div>
     </div>
     <div class="col d-flex justify-content-center mb-4">
       <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-        <h5 class="card-title pt-2 text-center text-primary"> Videojuego Mario Kart 8</h5>
+        <h5 class="card-title pt-2 text-center text-primary">Videojuego Mario Kart 8</h5>
         <img src="/Imagenes/mariokart8.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text text-white-50 description">
@@ -85,7 +175,7 @@
           </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="14" name="14" class="btn btn-primary button" >Añadir a Carrito</button>
         </div>
         </div>
       </div>
@@ -100,7 +190,7 @@
           </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 500</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="15" name="15" class="btn btn-primary button" >Añadir a Carrito</button>
         </div>
         </div>
       </div>
@@ -116,7 +206,7 @@
           </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 1200</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="16" name="16"  class="btn btn-primary button">Añadir a Carrito</button>
         </div>
         </div>
       </div>
@@ -132,7 +222,7 @@
           </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 999</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button id="17" name="17"  class="btn btn-primary button">Añadir a Carrito</button>
         </div>
         </div>
       </div>
@@ -150,15 +240,201 @@
           </p>
           <h5 class="text-primary">Precio: <span class="precio">$ 5000</span></h5>
           <div class="d-grid gap-2">
-          <button  class="btn btn-primary button">Añadir a Carrito</button>
+          <button  id="18" name="18" class="btn btn-primary button">Añadir a Carrito</button>
+        </div>
         </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
+  <div
+  class="tab-pane fade carrito"
+  id="pills-contact"
+  role="tabpanel"
+  aria-labelledby="pills-contact-tab"
+>
+<br>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr class="text-primary">
+      <th scope="col">#</th>
+      <th scope="col">Productos</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    
   
+    
+  </tbody>
+</table>
+<br><br>
+<div class="row mx-4">
+  <div class="col">
+    <h3 class="itemCartTotal text-white">Total: 0</h3>
+  </div>
+  <div class="col d-flex justify-content-end">
+    <button class="btn btn-success">COMPRAR</button>
+  </div>
+</div>
+
+  </div>
+</div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+  const Clickbutton = document.querySelectorAll('.button')
+const tbody = document.querySelector('.tbody')
+let carrito = []
+
+Clickbutton.forEach(btn => {
+  btn.addEventListener('click', addToCarritoItem)
+})
+
+
+function addToCarritoItem(e){
+  const button = e.target
+  const item = button.closest('.card')
+  const itemTitle = item.querySelector('.card-title').textContent;
+  const itemPrice = item.querySelector('.precio').textContent;
+  const itemImg = item.querySelector('.card-img-top').src;
+  
+  const newItem = {
+    title: itemTitle,
+    precio: itemPrice,
+    img: itemImg,
+    cantidad: 1
+  }
+
+  addItemCarrito(newItem)
+}
+
+
+function addItemCarrito(newItem){
+
+  const alert = document.querySelector('.alert')
+
+  setTimeout( function(){
+    alert.classList.add('hide')
+  }, 2000)
+    alert.classList.remove('hide')
+
+  const InputElemnto = tbody.getElementsByClassName('input__elemento')
+  for(let i =0; i < carrito.length ; i++){
+    if(carrito[i].title.trim() === newItem.title.trim()){
+      carrito[i].cantidad ++;
+      const inputValue = InputElemnto[i]
+      inputValue.value++;
+      CarritoTotal()
+      return null;
+    }
+  }
+  
+  carrito.push(newItem)
+  
+  renderCarrito()
+} 
+
+
+function renderCarrito(){
+  tbody.innerHTML = ''
+  carrito.map(item => {
+    const tr = document.createElement('tr')
+    tr.classList.add('ItemCarrito')
+    const Content = `
+    
+    <th scope="row">1</th>
+            <td class="table__productos">
+              <img src=${item.img}  alt="">
+              <h6 class="title">${item.title}</h6>
+            </td>
+            <td class="table__price"><p>${item.precio}</p></td>
+            <td class="table__cantidad">
+              <input type="number" min="1" value=${item.cantidad} class="input__elemento">
+              <button class="delete btn btn-danger">x</button>
+            </td>
+    
+    `
+    tr.innerHTML = Content;
+    tbody.append(tr)
+
+    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
+    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
+  })
+  CarritoTotal()
+}
+
+function CarritoTotal(){
+  let Total = 0;
+  const itemCartTotal = document.querySelector('.itemCartTotal')
+  carrito.forEach((item) => {
+    const precio = Number(item.precio.replace("$", ''))
+    Total = Total + precio*item.cantidad
+  })
+
+  itemCartTotal.innerHTML = `Total $${Total}`
+  addLocalStorage()
+}
+
+function removeItemCarrito(e){
+  const buttonDelete = e.target
+  const tr = buttonDelete.closest(".ItemCarrito")
+  const title = tr.querySelector('.title').textContent;
+  for(let i=0; i<carrito.length ; i++){
+
+    if(carrito[i].title.trim() === title.trim()){
+      carrito.splice(i, 1)
+    }
+  }
+
+  const alert = document.querySelector('.remove')
+
+  setTimeout( function(){
+    alert.classList.add('remove')
+  }, 2000)
+    alert.classList.remove('remove')
+
+  tr.remove()
+  CarritoTotal()
+}
+
+function sumaCantidad(e){
+  const sumaInput  = e.target
+  const tr = sumaInput.closest(".ItemCarrito")
+  const title = tr.querySelector('.title').textContent;
+  carrito.forEach(item => {
+    if(item.title.trim() === title){
+      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+      item.cantidad = sumaInput.value;
+      CarritoTotal()
+    }
+  })
+}
+
+function addLocalStorage(){
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+
+window.onload = function(){
+  const storage = JSON.parse(localStorage.getItem('carrito'));
+  if(storage){
+    carrito = storage;
+    renderCarrito()
+  }
+}
+  </script>
+
+
 {{template "pie"}}
 {{end}}
